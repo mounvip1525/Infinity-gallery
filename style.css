@@ -8,15 +8,17 @@ h1{
     font-family: 'Nunito', sans-serif;
     text-align:center;
     letter-spacing: 2px;
+    font-size:2rem;
+}
+h1:hover{
+  text-shadow: 2px 2px 5px #333;
 }
 hr{
     width:35%;
     margin:auto;
-    margin-bottom:10px;
     border: 0;
-    height: 0;
-    border-top: 1.5px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0,0,0,0.4);
+    height: 1px;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 .loader{
     position:fixed;
@@ -34,25 +36,29 @@ hr{
 }
 .row {
     display: flex;
-    padding: 0 4px;
+    padding: 0 8px;
   }
   .column {
     flex:1;
-    padding: 0 4px;
+    padding: 0px 8px;
   }
  .image-container {
-    margin: 10px 15%;
+    margin: 10px 10px;
   } 
  .image-container img {
     width: 100%;
-    margin-top: 5px;
+    border-radius: 10px;
+    transition:all 0.5s ease-in-out;
   } 
-  @media screen and (max-width: 600px) {
-    h1 {
-      font-size: 20px;
+  .image-container img:hover{
+    transform:scale(1.01);
+  }
+  @media screen and (max-width: 650px) {
+    .column,
+    .row{
+      padding:0 4px;
     }
-  
-    .image-container {
-      margin: 10px;
+    .image-container img{
+      border-radius: 2px;
     }
   }
